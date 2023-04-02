@@ -1,0 +1,302 @@
+/* Variables */
+:root {
+    --primary-color: hsl(173.1,86.1%,19.8%);
+    --secondary-color: hsl(0,0%,10.6%);
+    --tertiary-color: hsl(202.1,22.9%,16.3%);
+    --primary-font-color: hsl(200,15.8%,92.5%);
+    --secondary-font-color: hsl(203.1,12%,57.6%);
+    --hover-effect-color: hsl(201.1,23.3%,31.2%);
+}
+
+/* Default styles */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+    height: 97vh;
+}
+
+/* Profile section styles */
+nav {
+    display: flex;
+    height: 7%;
+    background-color: var(--primary-color);
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+}
+
+.navbar__profile-img {
+    cursor: pointer;
+    border-radius: 100%;
+    width: 5%;
+    height: 5%;
+    height: auto;
+    margin: auto 0px;
+    margin-left: 10px;
+}
+
+.navbar .navbar__profile-info {
+    line-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto 0px;
+    margin-left: 2%;
+}
+
+.navbar__profile-info #navbar__profile-info-name {
+    color: var(--primary-font-color);
+    margin-bottom: 4px;
+}
+
+.navbar__profile-info #navbar__profile-info-lastseen {
+    color: var(--secondary-font-color);
+    font-size: small;
+}
+
+/* Main content styles */
+#chat-space {
+    overflow-y: scroll;
+    color: var(--primary-font-color);
+    display: flex;
+    height: 88%;
+    flex-direction: column;
+    background-image: url("../assets/images/chat-bg.jpg");
+    align-items: flex-end;
+    position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+}
+
+#chat-space .chat-space__conversation {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#chat-space .chat-space__conversation::-webkit-scrollbar {
+    display: none;
+}
+
+#chat-space__conversation-content {
+    overflow-y: hidden;
+    position: static;
+    width: 100%;
+    bottom: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-space__conversation-content li {
+    width: 100%;
+    text-decoration: none;
+    flex-direction: row-reverse;
+}
+
+.chat-space__chat-element {
+    text-align: end;
+    float: right;
+    width: auto;
+    max-width: 45%;
+}
+
+.chat-space__chat-element-content {
+    margin: 5px;
+    text-align: start;
+    width: auto;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border-radius: 15px 15px 0px;
+}
+
+.chat-space__chat-received-element {
+    max-width: 45%;
+    margin: 5px;
+    text-align: start;
+    width: auto;
+    padding: 10px;
+    background-color: var(--tertiary-color);
+    border-radius: 0px 15px 15px;
+}
+
+.chat-space__chat-received-element p {
+    margin-bottom: 0.5em;
+}
+
+.chat-space__chat-received-element .chat-space__mapview {
+    margin: auto;
+    display: flex;
+    padding: 5px;
+}
+
+.chat-space__map {
+    margin: auto;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.chat-space__date-label {
+    color: var(--secondary-font-color);
+    display: block;
+    text-align: end;
+    font-size: x-small;
+}
+
+#chat-space .navbar__expanded-profile-img {
+    transition: all 700ms ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: var(--secondary-font-color);
+    z-index: 1000;
+}
+
+#chat-space .navbar__expanded-profile-img .navbar__expanded-profile-img-content {
+    display: flex;
+    margin: auto;
+    scrollbar-width: 0px;
+}
+
+.navbar__expanded-profile-img-close-btn {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    margin-left: 6%;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.navbar__expanded-profile-img-close-btn {
+    color: var(--secondary-color);
+    transition: all 400ms ease-in-out;
+}
+
+.navbar__expanded-profile-img-close-btn:hover {
+    color: red;
+}
+
+#chat-space .navbar__expanded-profile-img .navbar__expanded-profile-img-content .navbar__expanded-profile-img-src {
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Footer styles */
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: var(--primary-font-color);
+    text-align: center;
+    height: auto;
+    background-color: var(--tertiary-color );
+    text-align: center;
+}
+
+footer .chat-space__send-icon {
+    align-self: center;
+}
+
+footer .chat-space__send-icon ion-icon{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+footer .chat-space__send-icon ion-icon:hover{
+    color: var(--hover-effect-color);
+}
+
+.chat-space__input-section {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.chat-space__input-section input[type="text"] {
+    margin: auto;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--primary-font-color);
+    float: left;
+    width: 80%;
+    height: 100%;
+    outline-color: transparent;
+    accent-color: transparent;
+    background-color: var(--tertiary-color);
+    outline: none;
+    border-color: transparent;
+}
+
+.chat-space__input-section input[type="text"]:hover {
+    background-color: var(--hover-effect-color);
+}
+
+::placeholder {
+    color: var(--secondary-font-color);
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: var(--secondary-font-color);
+}
+
+::-ms-input-placeholder {
+    color: var(--secondary-font-color);
+}
+
+/* Responsive styles */
+@media screen and (min-width: 1024px) {
+    body {
+        margin: auto;
+        width: 50vw;
+    }
+
+    .chat-space__input-section {
+        width: 85%;
+    }
+
+    #chat-space {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #chat-space .navbar__expanded-profile-img {
+        display: none;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    #chat-space .navbar__expanded-profile-img .navbar__expanded-profile-img-content {
+        display: flex;
+        width: 70%;
+    }
+
+    #chat-space .navbar__expanded-profile-img .navbar__expanded-profile-img-src {
+        width: 50%;
+        margin: auto;
+    }
+
+    #chat-space .navbar__expanded-profile-img-close-btn {
+        margin-top: 15px;
+    }
+}
