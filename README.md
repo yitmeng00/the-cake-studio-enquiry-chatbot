@@ -36,4 +36,4 @@ cd the-cake-studio-enquiry-chatbot
 ```
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project does not has any license.
