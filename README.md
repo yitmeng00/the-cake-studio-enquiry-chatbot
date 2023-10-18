@@ -32,7 +32,6 @@ To run this app locally, simply clone this repository and open the index.html fi
 
 ```bash
 git clone https://github.com/yitmeng00/the-cake-studio-enquiry-chatbot.git
-cd the-cake-studio-enquiry-chatbot
 ```
 
 ## License
