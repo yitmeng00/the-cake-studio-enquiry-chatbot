@@ -2,16 +2,23 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>The Cake Studio</title>
         <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
-        <!-- Custom CSS and JS -->
+
+        <!-- css and js src -->
         <link rel="stylesheet" href="css/style.css" />
-        <script src="js/script.js"></script>
-        <!-- Libraries -->
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="js/script.js" defer></script>
+
+        <!-- ionicons -->
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
     </head>
 
     <body onload="initChatbot()">
@@ -25,7 +32,9 @@
                     alt=""
                 />
                 <div class="navbar__profile-info">
-                    <label id="navbar__profile-info-name">The Cake Studio</label>
+                    <label id="navbar__profile-info-name"
+                        >The Cake Studio</label
+                    >
                     <label id="navbar__profile-info-lastseen"></label>
                 </div>
             </div>
@@ -34,7 +43,10 @@
         <!-- Main Content -->
         <section id="chat-space">
             <!-- Profile Img -->
-            <div class="navbar__expanded-profile-img" id="navbar__expanded-profile-img">
+            <div
+                class="navbar__expanded-profile-img"
+                id="navbar__expanded-profile-img"
+            >
                 <div class="navbar__expanded-profile-img-content">
                     <img
                         class="navbar__expanded-profile-img-src"

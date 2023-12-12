@@ -1,11 +1,11 @@
 /* Variables */
 :root {
-    --primary-color: hsl(173.1,86.1%,19.8%);
-    --secondary-color: hsl(0,0%,10.6%);
-    --tertiary-color: hsl(202.1,22.9%,16.3%);
-    --primary-font-color: hsl(200,15.8%,92.5%);
-    --secondary-font-color: hsl(203.1,12%,57.6%);
-    --hover-effect-color: hsl(201.1,23.3%,31.2%);
+    --primary-color: hsl(173.1, 86.1%, 19.8%);
+    --secondary-color: hsl(0, 0%, 10.6%);
+    --tertiary-color: hsl(202.1, 22.9%, 16.3%);
+    --primary-font-color: hsl(200, 15.8%, 92.5%);
+    --secondary-font-color: hsl(203.1, 12%, 57.6%);
+    --hover-effect-color: hsl(201.1, 23.3%, 31.2%);
 }
 
 /* Default styles */
@@ -164,7 +164,9 @@ nav {
     z-index: 1000;
 }
 
-#chat-space .navbar__expanded-profile-img .navbar__expanded-profile-img-content {
+#chat-space
+    .navbar__expanded-profile-img
+    .navbar__expanded-profile-img-content {
     display: flex;
     margin: auto;
     scrollbar-width: 0px;
@@ -189,7 +191,10 @@ nav {
     color: red;
 }
 
-#chat-space .navbar__expanded-profile-img .navbar__expanded-profile-img-content .navbar__expanded-profile-img-src {
+#chat-space
+    .navbar__expanded-profile-img
+    .navbar__expanded-profile-img-content
+    .navbar__expanded-profile-img-src {
     width: 90%;
     margin: auto;
     border-radius: 10px;
@@ -204,7 +209,7 @@ footer {
     color: var(--primary-font-color);
     text-align: center;
     height: auto;
-    background-color: var(--tertiary-color );
+    background-color: var(--tertiary-color);
     text-align: center;
 }
 
@@ -212,12 +217,12 @@ footer .chat-space__send-icon {
     align-self: center;
 }
 
-footer .chat-space__send-icon ion-icon{
+footer .chat-space__send-icon ion-icon {
     font-size: 1.5em;
     cursor: pointer;
 }
 
-footer .chat-space__send-icon ion-icon:hover{
+footer .chat-space__send-icon ion-icon:hover {
     color: var(--hover-effect-color);
 }
 
@@ -286,12 +291,16 @@ footer .chat-space__send-icon ion-icon:hover{
         overflow-y: scroll;
     }
 
-    #chat-space .navbar__expanded-profile-img .navbar__expanded-profile-img-content {
+    #chat-space
+        .navbar__expanded-profile-img
+        .navbar__expanded-profile-img-content {
         display: flex;
         width: 70%;
     }
 
-    #chat-space .navbar__expanded-profile-img .navbar__expanded-profile-img-src {
+    #chat-space
+        .navbar__expanded-profile-img
+        .navbar__expanded-profile-img-src {
         width: 50%;
         margin: auto;
     }
