@@ -1,9 +1,5 @@
-// audio files
-const sendMsgAudio = new Audio("assets/audios/send-msg.mp3");
-const receiveMsgAudio = new Audio("assets/audios/receive-msg.mp3");
-
-// keyword content
-const keywordContent = {
+// responses
+const responses = {
     welcome: `<div>
                 <p>
                     Hi there! Welcome to The Cake Studio. I'm your friendly enquiry chatbot.
@@ -202,33 +198,33 @@ function prepareResponse(inputValue) {
     switch (inputValue.toLowerCase().trim()) {
         case "welcome":
             setTimeout(() => {
-                sendResponse(keywordContent.welcome);
+                sendResponse(responses.welcome);
             }, 2000);
             break;
         case "info":
-            sendResponse(keywordContent.info);
+            sendResponse(responses.info);
             break;
         case "cake":
-            sendResponse(keywordContent.cake);
+            sendResponse(responses.cake);
             break;
         case "price":
-            sendResponse(keywordContent.price);
+            sendResponse(responses.price);
             break;
         case "delivery":
-            sendResponse(keywordContent.delivery);
+            sendResponse(responses.delivery);
             break;
         case "order":
-            sendResponse(keywordContent.order);
+            sendResponse(responses.order);
             break;
         case "contact":
-            sendResponse(keywordContent.contact);
+            sendResponse(responses.contact);
             break;
         case "address":
-            sendResponse(keywordContent.address);
+            sendResponse(responses.address);
             break;
         default:
             setTimeout(() => {
-                sendResponse(keywordContent.default);
+                sendResponse(responses.default);
             }, 2000);
             break;
     }
@@ -266,12 +262,14 @@ function sendResponse(msgToSend) {
     playReceiveMessageSound();
 }
 
-// send msg sound
+// send and receive msg noti sound
+const sendMsgAudio = new Audio("assets/audios/send-msg.mp3");
+const receiveMsgAudio = new Audio("assets/audios/receive-msg.mp3");
+
 function playSendMessageSound() {
     sendMsgAudio.play();
 }
 
-// receive msg noti sound
 function playReceiveMessageSound() {
     receiveMsgAudio.play();
 }
